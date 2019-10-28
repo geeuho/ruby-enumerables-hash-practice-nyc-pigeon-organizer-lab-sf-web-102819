@@ -1,10 +1,10 @@
 def nyc_pigeon_organizer(data)
-  pigeon_list = {}
+  pigeons = {}
   data.each do |color_gender_lives, value|
-    value.each do |stats, all_names|
-      all_names.each do |name|
-        if pigeon_list[name] == nil
-          pigeon_list[name] = {}
+    value.each do |stats, names|
+      names.each do |name|
+        if pigeons[name] == nil
+          pigeons[name] = {}
         end
         if pigeon_list[name][color_gender_lives] == nil
           pigeon_list[name][color_gender_lives] = []
