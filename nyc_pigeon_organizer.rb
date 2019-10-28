@@ -1,15 +1,15 @@
 def nyc_pigeon_organizer(data)
   pigeons = {}
-  data.each do |color_gender_lives, value|
+  data.each do | description, value|
     value.each do |stats, names|
       names.each do |name|
         if pigeons[name] == nil
           pigeons[name] = {}
         end
-        if pigeon_list[name][color_gender_lives] == nil
-          pigeon_list[name][color_gender_lives] = []
+        if pigeon_list[name][description] == nil
+          pigeon_list[name][description] = []
         end
-        pigeon_list[name][color_gender_lives].push(stats.to_s)
+        pigeon_list[name][description].push(stats.to_s)
       end
     end 
   end
