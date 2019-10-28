@@ -7,9 +7,9 @@ def nyc_pigeon_organizer(data)
           pigeons[name] = {}
         end
         if pigeons[name][description] == nil
-          pigeon_list[name][description] = []
+          pigeons[name][description] = []
         end
-        pigeon_list[name][description].push(stats.to_s)
+        pigeons[name][description].push(stats.to_s)
       end
     end 
   end
